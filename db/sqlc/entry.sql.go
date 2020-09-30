@@ -5,7 +5,6 @@ package db
 
 import (
 	"context"
-	"database/sql"
 )
 
 const createEntry = `-- name: CreateEntry :one
@@ -18,8 +17,8 @@ INSERT INTO entries (
 `
 
 type CreateEntryParams struct {
-	AccountID sql.NullInt64 `json:"account_id"`
-	Amount    int64         `json:"amount"`
+	AccountID int64 `json:"account_id"`
+	Amount    int64 `json:"amount"`
 }
 
 func (q *Queries) CreateEntry(ctx context.Context, arg CreateEntryParams) (Entry, error) {
@@ -32,15 +31,6 @@ func (q *Queries) CreateEntry(ctx context.Context, arg CreateEntryParams) (Entry
 		&i.CreatedAt,
 	)
 	return i, err
-}
-
-const deleteEntry = `-- name: DeleteEntry :exec
-DELETE FROM entries WHERE id = $1
-`
-
-func (q *Queries) DeleteEntry(ctx context.Context, id int64) error {
-	_, err := q.exec(ctx, q.deleteEntryStmt, deleteEntry, id)
-	return err
 }
 
 const getEntry = `-- name: GetEntry :one
@@ -62,18 +52,20 @@ func (q *Queries) GetEntry(ctx context.Context, id int64) (Entry, error) {
 
 const listEntrys = `-- name: ListEntrys :many
 SELECT id, account_id, amount, created_at FROM entries
+WHERE account_id = $1
 ORDER BY id
-LIMIT $1
-OFFSET $2
+LIMIT $2
+OFFSET $3
 `
 
 type ListEntrysParams struct {
-	Limit  int32 `json:"limit"`
-	Offset int32 `json:"offset"`
+	AccountID int64 `json:"account_id"`
+	Limit     int32 `json:"limit"`
+	Offset    int32 `json:"offset"`
 }
 
 func (q *Queries) ListEntrys(ctx context.Context, arg ListEntrysParams) ([]Entry, error) {
-	rows, err := q.query(ctx, q.listEntrysStmt, listEntrys, arg.Limit, arg.Offset)
+	rows, err := q.query(ctx, q.listEntrysStmt, listEntrys, arg.AccountID, arg.Limit, arg.Offset)
 	if err != nil {
 		return nil, err
 	}
@@ -98,27 +90,4 @@ func (q *Queries) ListEntrys(ctx context.Context, arg ListEntrysParams) ([]Entry
 		return nil, err
 	}
 	return items, nil
-}
-
-const updateEntry = `-- name: UpdateEntry :one
-UPDATE entries SET amount = $2
-WHERE id = $1
-RETURNING id, account_id, amount, created_at
-`
-
-type UpdateEntryParams struct {
-	ID     int64 `json:"id"`
-	Amount int64 `json:"amount"`
-}
-
-func (q *Queries) UpdateEntry(ctx context.Context, arg UpdateEntryParams) (Entry, error) {
-	row := q.queryRow(ctx, q.updateEntryStmt, updateEntry, arg.ID, arg.Amount)
-	var i Entry
-	err := row.Scan(
-		&i.ID,
-		&i.AccountID,
-		&i.Amount,
-		&i.CreatedAt,
-	)
-	return i, err
 }
