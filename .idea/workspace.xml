@@ -1,11 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="506ddb6e-9b1a-47f7-8354-c3e1fd157917" name="Default Changelist" comment="" />
+    <list default="true" id="506ddb6e-9b1a-47f7-8354-c3e1fd157917" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/db/query/entry.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/query/transfer.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/sqlc/account_test.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/sqlc/main_test.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/sqlc/transfer.sql.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/sqlc/db.go" beforeDir="false" afterPath="$PROJECT_DIR$/db/sqlc/db.go" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Go File" />
+      </list>
+    </option>
   </component>
   <component name="GOROOT" path="/usr/local/Cellar/go/1.15.2/libexec" />
   <component name="Git.Settings">
@@ -22,18 +37,55 @@
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="DefaultGoTemplateProperty" value="Go File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="go.import.settings.migrated" value="true" />
     <property name="go.sdk.automatically.set" value="true" />
     <property name="go.tried.to.enable.integration.vgo.integrator" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/db/query" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/db/query" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Go Test.go test simplebank">
+    <configuration name="Unnamed" type="FirefoxRemoteDebugType" nameIsGenerated="true">
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="GoTestRunConfiguration" factoryName="Go Test">
+      <module name="simplebank" />
+      <working_directory value="$PROJECT_DIR$" />
+      <go_parameters value="-i" />
+      <framework value="gotest" />
+      <kind value="FILE" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$/../simplebank|$PROJECT_DIR$/db/sqlc/main_test.go" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go test simplebank" type="GoTestRunConfiguration" factoryName="Go Test" nameIsGenerated="true">
+      <module name="simplebank" />
+      <working_directory value="$PROJECT_DIR$" />
+      <go_parameters value="-i" />
+      <sudo value="true" />
+      <framework value="gotest" />
+      <kind value="DIRECTORY" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$/../simplebank|$PROJECT_DIR$/db/sqlc/" />
+      <output_directory value="$PROJECT_DIR$/db/sqlc" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Firefox Remote.Unnamed" />
+      <item itemvalue="Go Test.go test simplebank" />
+    </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TypeScriptGeneratedFilesManager">
@@ -56,10 +108,30 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="75" y="295" key="#SQL_Dialects/0.23.1440.877@0.23.1440.877" timestamp="1601389793901" />
-    <state x="270" y="37" key="CommitChangelistDialog2" timestamp="1601390752898">
+    <state x="184" y="123" width="1071" height="724" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1601391873843">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="270" y="37" key="CommitChangelistDialog2/0.23.1440.877@0.23.1440.877" timestamp="1601390752898" />
+    <state x="184" y="123" width="1071" height="724" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.877@0.23.1440.877" timestamp="1601391873843" />
+    <state x="270" y="37" key="CommitChangelistDialog2" timestamp="1601390912582">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="270" y="37" key="CommitChangelistDialog2/0.23.1440.877@0.23.1440.877" timestamp="1601390912582" />
+    <state width="1398" height="231" key="GridCell.Tab.0.bottom" timestamp="1601391877347">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1398" height="231" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1601391877347" />
+    <state width="1398" height="231" key="GridCell.Tab.0.center" timestamp="1601391877346">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1398" height="231" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1601391877346" />
+    <state width="1398" height="231" key="GridCell.Tab.0.left" timestamp="1601391877346">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1398" height="231" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1601391877346" />
+    <state width="1398" height="231" key="GridCell.Tab.0.right" timestamp="1601391877347">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1398" height="231" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1601391877347" />
     <state x="542" y="362" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1601390718928">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
