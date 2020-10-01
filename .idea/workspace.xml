@@ -2,13 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="506ddb6e-9b1a-47f7-8354-c3e1fd157917" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/db/query/entry.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/db/query/transfer.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/db/sqlc/account_test.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/db/sqlc/main_test.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/db/sqlc/transfer.sql.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/sqlc/db.go" beforeDir="false" afterPath="$PROJECT_DIR$/db/sqlc/db.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/sqlc/store.go" beforeDir="false" afterPath="$PROJECT_DIR$/db/sqlc/store.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/sqlc/store_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/db/sqlc/store_test.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,8 +52,41 @@
       <recent name="$PROJECT_DIR$/db/query" />
     </key>
   </component>
-  <component name="RunManager" selected="Go Test.go test simplebank">
+  <component name="RunManager" selected="Go Test.TestTransferTxDeadLock in github.com/techschool/simplebank/db/sqlc">
     <configuration name="Unnamed" type="FirefoxRemoteDebugType" nameIsGenerated="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="TestBoh in github.com/techschool/simplebank/db/sqlc" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="simplebank" />
+      <working_directory value="$PROJECT_DIR$/db/sqlc" />
+      <framework value="gotest" />
+      <kind value="PACKAGE" />
+      <package value="github.com/techschool/simplebank/db/sqlc" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$/../simplebank|$PROJECT_DIR$/db/sqlc/main_test.go" />
+      <pattern value="^\QTestBoh\E$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="TestTransferTx in github.com/techschool/simplebank/db/sqlc" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="simplebank" />
+      <working_directory value="$PROJECT_DIR$/db/sqlc" />
+      <framework value="gotest" />
+      <kind value="PACKAGE" />
+      <package value="github.com/techschool/simplebank/db/sqlc" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$/../simplebank|$PROJECT_DIR$/db/sqlc/main_test.go" />
+      <pattern value="^\QTestTransferTx\E$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="TestTransferTxDeadLock in github.com/techschool/simplebank/db/sqlc" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="simplebank" />
+      <working_directory value="$PROJECT_DIR$/db/sqlc" />
+      <framework value="gotest" />
+      <kind value="PACKAGE" />
+      <package value="github.com/techschool/simplebank/db/sqlc" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$/../simplebank|$PROJECT_DIR$/db/sqlc/main_test.go" />
+      <pattern value="^\QTestTransferTxDeadLock\E$" />
       <method v="2" />
     </configuration>
     <configuration default="true" type="GoTestRunConfiguration" factoryName="Go Test">
@@ -85,7 +114,17 @@
     <list>
       <item itemvalue="Firefox Remote.Unnamed" />
       <item itemvalue="Go Test.go test simplebank" />
+      <item itemvalue="Go Test.TestBoh in github.com/techschool/simplebank/db/sqlc" />
+      <item itemvalue="Go Test.TestTransferTx in github.com/techschool/simplebank/db/sqlc" />
+      <item itemvalue="Go Test.TestTransferTxDeadLock in github.com/techschool/simplebank/db/sqlc" />
     </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Go Test.TestTransferTxDeadLock in github.com/techschool/simplebank/db/sqlc" />
+        <item itemvalue="Go Test.TestTransferTx in github.com/techschool/simplebank/db/sqlc" />
+        <item itemvalue="Go Test.TestBoh in github.com/techschool/simplebank/db/sqlc" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TypeScriptGeneratedFilesManager">
@@ -116,22 +155,22 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="270" y="37" key="CommitChangelistDialog2/0.23.1440.877@0.23.1440.877" timestamp="1601390912582" />
-    <state width="1398" height="231" key="GridCell.Tab.0.bottom" timestamp="1601391877347">
+    <state width="1398" height="231" key="GridCell.Tab.0.bottom" timestamp="1601541308566">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1398" height="231" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1601391877347" />
-    <state width="1398" height="231" key="GridCell.Tab.0.center" timestamp="1601391877346">
+    <state width="1398" height="231" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1601541308566" />
+    <state width="1398" height="231" key="GridCell.Tab.0.center" timestamp="1601541308564">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1398" height="231" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1601391877346" />
-    <state width="1398" height="231" key="GridCell.Tab.0.left" timestamp="1601391877346">
+    <state width="1398" height="231" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1601541308564" />
+    <state width="1398" height="231" key="GridCell.Tab.0.left" timestamp="1601541308563">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1398" height="231" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1601391877346" />
-    <state width="1398" height="231" key="GridCell.Tab.0.right" timestamp="1601391877347">
+    <state width="1398" height="231" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1601541308563" />
+    <state width="1398" height="231" key="GridCell.Tab.0.right" timestamp="1601541308565">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1398" height="231" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1601391877347" />
+    <state width="1398" height="231" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1601541308565" />
     <state x="542" y="362" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1601390718928">
       <screen x="0" y="23" width="1440" height="877" />
     </state>

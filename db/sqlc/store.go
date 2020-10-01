@@ -93,26 +93,40 @@ func (store *Store) TransferTX(ctx context.Context, arg TransferTxParams) (Trans
 			return err
 		}
 
-		//2a) aggiorno balance
-		result.FromAccount, err = q.AddAccountBalance(ctx, AddAccountBalanceParams{
-			ID:     arg.FromAccountiD,
-			Amount: -arg.Amount,
-		})
-		if err != nil {
-			return err
-		}
-
-		//2b) aggiorno balance
-		result.ToAccount, err = q.AddAccountBalance(ctx, AddAccountBalanceParams{
-			ID:     arg.ToAccountiD,
-			Amount: arg.Amount,
-		})
-		if err != nil {
-			return err
+		if arg.FromAccountiD < arg.ToAccountiD {
+			result.FromAccount, result.ToAccount, err = addMoney(ctx, q, arg.FromAccountiD, -arg.Amount, arg.ToAccountiD, arg.Amount)
+		} else {
+			result.ToAccount, result.FromAccount, err = addMoney(ctx, q, arg.ToAccountiD, arg.Amount, arg.FromAccountiD, -arg.Amount)
 		}
 
 		//e poi fare aggiornamento
 		return nil
 	})
 	return result, err
+}
+
+func addMoney(
+	ctx context.Context,
+	q *Queries,
+	accountID1 int64,
+	amount1 int64,
+	accountID2 int64,
+	amount2 int64,
+) (account1 Account, account2 Account, err error) {
+	account1, err = q.AddAccountBalance(ctx, AddAccountBalanceParams{
+		ID:     accountID1,
+		Amount: amount1,
+	})
+	if err != nil {
+		return
+	}
+	account2, err = q.AddAccountBalance(ctx, AddAccountBalanceParams{
+		ID:     accountID2,
+		Amount: amount2,
+	})
+	if err != nil {
+		return
+	}
+
+	return
 }
